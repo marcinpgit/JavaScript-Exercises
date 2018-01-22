@@ -65,12 +65,3 @@ function matrix (n) {
 }
 
 matrix(4);
-
-
-// Write a JavaScript function to compute the factors of a positive integer.
-
-console.log('script 11');
-
-function computeFact (num) {
-
-}

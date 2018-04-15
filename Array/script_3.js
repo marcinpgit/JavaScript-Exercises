@@ -49,3 +49,31 @@ function removeDuplicate(arr) {
 console.log(removeDuplicate([23, 1, 1, 2, 3, 4, 4]));
 
 
+// We have the following arrays :
+// color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+// o = ["th","st","nd","rd"]
+// Write a JavaScript program to display the colors in the following way :
+//     "1st choice is Blue ."
+// "2nd choice is Green."
+// "3rd choice is Red."
+// - - - - - - - - - - - - -
+//     Note : Use ordinal numbers to tell their position.
+
+console.log('script 4');
+
+var color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+
+function ordinalNum(n)
+{
+    var o = ["th","st","nd","rd"],
+        x = n % 100;
+    return x + (o[(x - 20) % 10] || o[x] || o[0]);
+}
+
+for(var n = 0; n < color.length; n++){
+    var ordinal = n + 1;
+
+    var output = (ordinalNum(ordinal) + " choice is " + color[n]);
+
+    console.log(output);
+}

@@ -42,3 +42,51 @@ function difference (ar1, ar2) {
 
 console.log(difference([1, 2, 3], [100, 2, 1, 10]));
 
+
+// Write a JavaScript function to remove. 'null', '0', '""', 'false', 'undefined' and 'NaN' values from an array.
+// Sample array : [NaN, 0, 15, false, -22, '',undefined, 47, null]
+// Expected result : [15, -22, 47]
+
+console.log('script 3');
+
+function filterArray(testArray) {
+    var index = -1;
+    var arrLength = testArray ? testArray.length : 0;
+    var resIndex = -1;
+    var result = [];
+
+    while (++index < arrLength) {
+        var value = testArray[index];
+
+        if (value) {
+            result[++resIndex] = value;
+        }
+    }
+    return result;
+}
+
+console.log(filterArray([NaN, 0, 15, false, -22, '',undefined, 47, null]));
+
+
+// Write a JavaScript function to sort the following array of objects by title value.
+// Sample object :
+
+console.log('script 4');
+
+var library = [
+    { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+    { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+    { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+];
+
+function arraySort(x, y) {
+    if (x.title < y.title) {
+        return -1;
+    }
+    if (x.title > y.title) {
+        return 1;
+    }
+    return 0;
+}
+
+console.log(library.sort(arraySort));
